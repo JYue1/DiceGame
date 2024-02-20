@@ -9,10 +9,6 @@ public class DiceGameViewer extends JFrame {
     private Image[] diceFace;
 
     public DiceGameViewer(DiceGame d) {
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setTitle("DiceGame");
-        this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        this.setVisible(true);
 
         this.d = d;
 
@@ -23,6 +19,11 @@ public class DiceGameViewer extends JFrame {
         diceFace[3] = new ImageIcon("Resources/four.jpg").getImage();
         diceFace[4] = new ImageIcon("Resources/five.jpg").getImage();
         diceFace[5] = new ImageIcon("Resources/six.jpg").getImage();
+
+        this.setTitle("DiceGame");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        this.setVisible(true);
     }
 
     public Image[] getImages() {
@@ -30,12 +31,23 @@ public class DiceGameViewer extends JFrame {
     }
 
     public void paint(Graphics g) {
+;
+
+        g.setColor(Color.black);
+        d.getDieOne().draw(g);
+        d.getDieTwo().draw(g);
+
+        g.setFont(new Font("Serif", Font.ITALIC, 40));
+        g.drawString(d.getName()[0], 300, 300);
+        g.drawString(d.getName()[1], 600, 600);
 
 
-
-
-
-
+        if (d.getWinner().equals(d.getName()[0])) {
+            g.drawString(d.getName()[0] + " has won!", 325, 650);
+        }
+        else if (d.getWinner().equals(d.getName()[1])) {
+            g.drawString(d.getName()[1] + " has won!", 325, 650);
+        }
     }
 
 
