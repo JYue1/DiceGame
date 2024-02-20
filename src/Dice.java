@@ -38,24 +38,23 @@ public class Dice {
         g.drawString("Insturctions: Whichever player rolls the highest die wins the game", 180, 250);
 
 
-
         if (currentRoll == 1) {
-            g.drawImage(oneImage, 150, 150, 150, 150, window);
+            g.drawImage(oneImage, dieOneX, dieOneY, 150, 150, window);
         }
         else if (currentRoll == 2) {
-            g.drawImage(twoImage, 450, 450, 150, 150, window);
+            g.drawImage(twoImage, dieOneX, dieOneY, 150, 150, window);
         }
         else if (currentRoll == 3) {
-            g.drawImage(threeImage, 450, 450, 150, 150, window);
+            g.drawImage(threeImage, dieOneX, dieOneY, 150, 150, window);
         }
         else if (currentRoll == 4) {
-            g.drawImage(fourImage, 450, 450, 150, 150, window);
+            g.drawImage(fourImage, dieOneX, dieOneY, 150, 150, window);
         }
         else if (currentRoll == 5) {
-            g.drawImage(fiveImage, 450, 450, 150, 150, window);
+            g.drawImage(fiveImage, dieOneX, dieOneY, 150, 150, window);
         }
         else if (currentRoll == 6) {
-            g.drawImage(sixImage, 450, 450, 150, 150, window);
+            g.drawImage(sixImage, dieOneX, dieOneY, 150, 150, window);
         }
     }
 }
