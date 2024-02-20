@@ -65,7 +65,6 @@ public class DiceGame {
         if (start.equals("S")) {
             window.repaint();
         }
-        window.repaint();
 
         if (dieOne.getRoll() > dieTwo.getRoll()) {
             winner = name[0];
@@ -73,7 +72,6 @@ public class DiceGame {
         else {
             winner = name[1];
         }
-        window.repaint();
     }
 
     public static void main(String[] args) {

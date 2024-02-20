@@ -5,6 +5,10 @@ public class DiceGameViewer extends JFrame {
 
     private final int WINDOW_WIDTH = 1000;
     private final int WINDOW_HEIGHT = 1000;
+    private final int dieOneX = 200;
+    private final int dieOneY = 500;
+    private final int dieTwoX = 700;
+    private final int dieTwoY = 500;
     private DiceGame d;
     private Image[] diceFace;
 
@@ -31,13 +35,19 @@ public class DiceGameViewer extends JFrame {
     }
 
     public void paint(Graphics g) {
+
+//        private final int dieOneX = 200;
+//        private final int dieOneY = 500;
+//        private final int dieTwoX = 700;
+//        private final int dieTwoY = 500;
+
         g.setColor(Color.black);
-        d.getDieOne().draw(g);
-        d.getDieTwo().draw(g);
+        d.getDieOne().draw(g, 150, 400);
+        d.getDieTwo().draw(g, dieTwoX, 400);
 
         g.setFont(new Font("Serif", Font.ITALIC, 40));
         g.drawString(d.getName()[0], 150, 350);
-        g.drawString(d.getName()[1], 750, 350);
+        g.drawString(d.getName()[1], 720, 350);
 
 
         if (d.getWinner().equals(d.getName()[0])) {
