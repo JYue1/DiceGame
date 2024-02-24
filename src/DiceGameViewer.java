@@ -17,6 +17,7 @@ public class DiceGameViewer extends JFrame {
     private final int dieOneY = 400;
     private final int dieTwoX = 700;
     private final int dieTwoY = 400;
+
     // Instance variables
     private DiceGame d;
     private Image[] diceFace;

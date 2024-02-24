@@ -41,7 +41,8 @@ public class Dice {
         g.setFont(new Font("Serif", Font.BOLD, 40));
         g.drawString("Welcome to Highest Roller!", 220, 150);
         g.setFont(new Font("Serif", Font.PLAIN, 20));
-        g.drawString("Insturctions: Whichever player rolls the highest die wins the game", 180, 250);
+        g.drawString("Instructions: Enter the name's of the players playing and type \"S\" to begin", 170, 250);
+        g.drawString("Rules: Whichever player rolls the highest die wins the game", 180, 280);
 
 
         // C.T. Can use if, while, and for.

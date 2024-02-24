@@ -82,7 +82,7 @@ public class DiceGame {
         // Repaint the window with new information
         window.repaint();
 
-        // Determine which user is the winner
+        // Roll the dies and determine which user is the winner
         if (dieOne.getRoll() > dieTwo.getRoll()) {
             winner = name[0];
         }
